@@ -132,6 +132,6 @@ $$
 
 ​		Both of 2 motors and 2 joints of the ankle follow the right-hand rule: rotation around the Y-axis in the counterclockwise direction is considered positive, with the X-axis pointing forward and the Z-axis pointing vertically.
 
-​		Some notations:![ankle_d](/home/henning/Pictures/ankle_d.jpg)
+​		Some notations:![ankle_d](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_d.jpg)
 
-![ankle_h1h2L1](/home/henning/Pictures/ankle_h1h2L1.png)
+![ankle_h1h2L1](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/)
