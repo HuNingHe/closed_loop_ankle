@@ -1,0 +1,377 @@
+#VRML_SIM R2023b utf8
+
+WorldInfo {
+  gravity 0
+  basicTimeStep 1
+}
+Viewpoint {
+  orientation 0.028957120877863687 0.029720195920257188 0.9991387266565772 4.73743770771965
+  position -0.060223298977936816 2.992983433777588 -0.677631920130888
+}
+Background {
+  skyColor [
+    1 1 1
+  ]
+}
+Robot {
+  translation 0 0 -0.47
+  children [
+    Solid {
+      children [
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 1 0
+            anchor 0 -0.06 -0.16
+            minStop -0.5
+            maxStop 0.5
+          }
+          device [
+            RotationalMotor {
+              name "ankle_r_motor"
+              controlPID 25 0 0
+              maxTorque 36
+            }
+            PositionSensor {
+              name "ankle_r_motor_pos"
+            }
+          ]
+          endPoint Solid {
+            translation -0.06 -0.06 -0.16
+            rotation 0 1 0 1.5708
+            children [
+              BallJoint {
+                jointParameters BallJointParameters {
+                  anchor 0 0 -0.06
+                }
+                jointParameters2 JointParameters {
+                }
+                jointParameters3 JointParameters {
+                  axis 0 1 0
+                }
+                endPoint Solid {
+                  translation 0.17 0 -0.06
+                  rotation 0 -0.9999999999999999 0 1.5707953071795862
+                  children [
+                    BallJoint {
+                      jointParameters BallJointParameters {
+                        anchor 0 0 -0.2
+                      }
+                      jointParameters2 JointParameters {
+                      }
+                      jointParameters3 JointParameters {
+                        axis 0 1 0
+                      }
+                      endPoint SolidReference {
+                        solidName "ankle_foot"
+                      }
+                    }
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                      }
+                      geometry Capsule {
+                        height 0.34
+                        radius 0.01
+                      }
+                    }
+                  ]
+                  boundingObject Capsule {
+                    height 0.34
+                    radius 0.01
+                    subdivision 16
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.1487020522699169
+                    centerOfMass [
+                      0 0 0
+                    ]
+                    inertiaMatrix [
+                      0.0027808435691780782 0.0027808435691780782 7.3932147114479825e-06
+                      0 0 0
+                    ]
+                  }
+                }
+              }
+              Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Capsule {
+                  height 0.12
+                  radius 0.01
+                }
+              }
+            ]
+            name "solid(1)"
+            boundingObject Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Capsule {
+                height 0.12
+                radius 0.01
+                subdivision 16
+              }
+            }
+            physics Physics {
+              density -1
+              mass 0.04188790204786391
+              centerOfMass [
+                0 0 0
+              ]
+              inertiaMatrix [
+                6.33135639453463e-05 6.33135639453463e-05 2.052507200345332e-06
+                0 0 0
+              ]
+            }
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 1 0
+            anchor 0 0.06 -0.04
+            minStop -0.5
+            maxStop 0.5
+          }
+          device [
+            RotationalMotor {
+              name "ankle_l_motor"
+              controlPID 25 0 0
+              maxTorque 36
+            }
+            PositionSensor {
+              name "ankle_l_motor_pos"
+            }
+          ]
+          endPoint Solid {
+            translation -0.06 0.06 -0.04
+            rotation 0 1 0 1.5708
+            children [
+              BallJoint {
+                jointParameters BallJointParameters {
+                  anchor 0 0 -0.06
+                }
+                jointParameters2 JointParameters {
+                }
+                jointParameters3 JointParameters {
+                  axis 0 1 0
+                }
+                endPoint Solid {
+                  translation 0.23 0 -0.06
+                  rotation 0 -0.9999999999999999 0 1.5707953071795862
+                  children [
+                    BallJoint {
+                      jointParameters BallJointParameters {
+                        anchor 0 0 -0.26
+                      }
+                      jointParameters2 JointParameters {
+                      }
+                      jointParameters3 JointParameters {
+                        axis 0 1 0
+                      }
+                      endPoint SolidReference {
+                        solidName "ankle_foot"
+                      }
+                    }
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                        }
+                      }
+                      geometry Capsule {
+                        height 0.46
+                        radius 0.01
+                      }
+                    }
+                  ]
+                  boundingObject Shape {
+                    appearance Appearance {
+                      material Material {
+                      }
+                    }
+                    geometry Capsule {
+                      height 0.46
+                      radius 0.01
+                      subdivision 16
+                    }
+                  }
+                  physics Physics {
+                    density -1
+                    mass 0.1487020522699169
+                    centerOfMass [
+                      0 0 0
+                    ]
+                    inertiaMatrix [
+                      0.0027808435691780782 0.0027808435691780782 7.3932147114479825e-06
+                      0 0 0
+                    ]
+                  }
+                }
+              }
+              Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                }
+                geometry Capsule {
+                  height 0.12
+                  radius 0.01
+                }
+              }
+            ]
+            boundingObject Shape {
+              appearance Appearance {
+                material Material {
+                }
+              }
+              geometry Capsule {
+                height 0.12
+                radius 0.01
+                subdivision 16
+              }
+            }
+            physics Physics {
+              density -1
+              mass 0.04188790204786391
+              centerOfMass [
+                0 0 0
+              ]
+              inertiaMatrix [
+                6.33135639453463e-05 6.33135639453463e-05 2.052507200345332e-06
+                0 0 0
+              ]
+            }
+          }
+        }
+        Hinge2Joint {
+          jointParameters HingeJointParameters {
+            axis 0 1 0
+            anchor 0 0 -0.53
+          }
+          jointParameters2 JointParameters {
+            axis 1 0 0
+          }
+          device [
+            RotationalMotor {
+              name "ankle_motor_pitch"
+              controlPID 25 0 0
+              maxTorque 20
+            }
+            PositionSensor {
+              name "ankle_pos_pitch"
+            }
+          ]
+          device2 [
+            RotationalMotor {
+              name "ankle_motor_roll"
+              controlPID 25 0 0
+              maxTorque 20
+            }
+            PositionSensor {
+              name "ankle_pos_roll"
+            }
+          ]
+          endPoint Solid {
+            translation 0.06 0 -0.53
+            children [
+              Shape {
+                appearance Appearance {
+                  material Material {
+                  }
+                  texture ImageTexture {
+                  }
+                  textureTransform TextureTransform {
+                  }
+                }
+                geometry Box {
+                  size 0.4 0.14 0.04
+                }
+              }
+            ]
+            name "ankle_foot"
+            boundingObject Shape {
+              appearance Appearance {
+                material Material {
+                }
+                texture ImageTexture {
+                }
+                textureTransform TextureTransform {
+                }
+              }
+              geometry Box {
+                size 0.4 0.14 0.04
+              }
+            }
+            physics Physics {
+              density -1
+              mass 2.24
+              centerOfMass [
+                0 0 0
+              ]
+              inertiaMatrix [
+                0.003957333333333334 0.03016533333333334 0.033525333333333344
+                0 0 0
+              ]
+            }
+          }
+        }
+        Shape {
+          appearance Appearance {
+            material Material {
+            }
+            texture ImageTexture {
+            }
+            textureTransform TextureTransform {
+            }
+          }
+          geometry Capsule {
+            height 1
+            radius 0.04
+          }
+          castShadows FALSE
+        }
+      ]
+      name "ankle_top"
+      boundingObject Shape {
+        appearance Appearance {
+          material Material {
+          }
+          texture ImageTexture {
+          }
+          textureTransform TextureTransform {
+          }
+        }
+        geometry Capsule {
+          height 1
+          radius 0.04
+          subdivision 16
+        }
+        castShadows FALSE
+      }
+      physics Physics {
+        density -1
+        mass 5.294630818849999
+        centerOfMass [
+          0 0 0
+        ]
+        inertiaMatrix [
+          0.4921030944969018 0.4921030944969018 0.004192811443382986
+          0 0 0
+        ]
+      }
+    }
+  ]
+  controller "my_controller"
+}
+DirectionalLight {
+  direction 0 -1 0
+}
+DirectionalLight {
+  direction 0 1 0
+}
+DirectionalLight {
+}
