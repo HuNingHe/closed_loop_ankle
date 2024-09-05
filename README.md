@@ -2,7 +2,7 @@
 
 ​		A mainstream 2-DOF humanoid ankle simulation in Webots. This implementation includes forward and inverse kinematics for a closed-loop ankle, enabling torque mapping between the two motors and the ankle joints.  Only for ankle like this:
 
-![ankle (1)](/home/henning/Downloads/ankle (1).gif)
+![ankle]([/home/henning/Downloads/ankle (1).gif](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle.gif))
 
 # Test
 
