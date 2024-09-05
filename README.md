@@ -134,4 +134,4 @@ $$
 
 ​		Some notations:![ankle_d](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_d.jpg)
 
-![ankle_h1h2L1](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/)
+![ankle_h1h2L1](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_h1h2L1.jpg)
