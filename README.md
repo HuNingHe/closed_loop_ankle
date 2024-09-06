@@ -51,8 +51,8 @@ $$
 =f_1(\theta_{p},\theta_{r}, d, L_1,h_1,h_2)
 $$
 
-​​​&emsp;&emsp;&emsp; where $f_1$ is `ankle_ik`
-
+​​​&emsp;&emsp;&emsp; where $f_1$ is `ankle_ik`, and all subscripts with '1' denote the left motor of ankle, while subscripts with '2' denote the right motor. The subscript 'p' represents the ankle pitch, and 'r' represents the ankle roll.
+Definitions for the remaining terms 'd', 'L1', 'h1', and 'h2' are link lengths can be found in the two figures below
 
 $$
 \begin{bmatrix}
@@ -130,12 +130,9 @@ $$
 \end{bmatrix}
 $$
 
-
-
 ​​​​​&emsp;&emsp;&emsp; Both of 2 motors and 2 joints of the ankle follow the right-hand rule: rotation around the Y-axis in the counterclockwise direction is considered positive, with the X-axis pointing forward and the Z-axis pointing vertically.
 
 ​​​​​&emsp;&emsp;&emsp; Some notations:
 
 ![ankle_d](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_d.jpg)
-
 ![ankle_h1h2L1](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_h1h2L1.png)
