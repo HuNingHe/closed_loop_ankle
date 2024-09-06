@@ -89,19 +89,19 @@ $$
 
 $$
 \begin{bmatrix}
-    \dot{\theta}_{p} \\
-    \dot{\theta}_{r}
+    \dot \theta_p \\
+    \dot \theta_r
 \end{bmatrix}
 =\begin{bmatrix}
     0.5 & 0.5 \\
-    \frac{\delta f_{2}}{\delta \theta_1} & \frac{\delta f_{2}}{\delta \theta_2}
+    \frac{\delta f_2}{\delta \theta_1} & \frac{\delta f_2}{\delta \theta_2}
 \end{bmatrix}
 \begin{bmatrix}
-    \dot{\theta}_{1} \\
-    \dot{\theta}_{2}
+    \dot \theta_1 \\
+    \dot \theta_2
 \end{bmatrix}=J_1\begin{bmatrix}
-    \dot{\theta}_{1} \\
-    \dot{\theta}_{2}
+    \dot \theta_1 \\
+    \dot \theta_2
 \end{bmatrix}
 $$
 
