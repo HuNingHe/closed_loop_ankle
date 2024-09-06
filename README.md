@@ -1,6 +1,6 @@
 # closed_loop_ankle
 
-​		A mainstream 2-DOF humanoid ankle simulation in Webots. This implementation includes forward and inverse kinematics for a closed-loop ankle, enabling torque mapping between the two motors and the ankle joints.  Only for ankle like this:
+​&emsp;&emsp;&emsp;A mainstream 2-DOF humanoid ankle simulation in Webots. This implementation includes forward and inverse kinematics for a closed-loop ankle, enabling torque mapping between the two motors and the ankle joints.  Only for ankle like this:
 
 ![ankle](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle.gif)
 
@@ -33,11 +33,11 @@ ros2 run plotjuggler plotjuggler
 # Open webots and run ankle.wbt
 ```
 
-​		If you are not using ros2, you can remove all shared memory related code and recompile, you can run still without data visualization.
+​​&emsp;&emsp;&emsp; If you are not using ros2, you can remove all shared memory related code and recompile, you can run still without data visualization.
 
-​		set `test_kinematics` in `my_controller.cpp`(line 352) to false, then you can test torque mapping between motors and ankle joint.
+​&emsp;&emsp;&emsp; set `test_kinematics` in `my_controller.cpp`(line 352) to false, then you can test torque mapping between motors and ankle joint.
 
-​		**suggest to use plot.xml of ros2_plot in plotjuggler**.
+​&emsp;&emsp;&emsp; **suggest to use plot.xml of ros2_plot in plotjuggler**.
 
 # Mathematics
 
