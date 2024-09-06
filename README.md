@@ -134,5 +134,11 @@ $$
 
 ​​​​​&emsp;&emsp;&emsp; Some notations:
 
-![ankle_d](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_d.jpg)
-![ankle_h1h2L1](https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_h1h2L1.png)
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_d.jpg" width="400" /></td>
+      <td><img src="https://github.com/HuNingHe/closed_loop_ankle/blob/main/pictures/ankle_h1h2L1.png" width="400" /></td>
+    </tr>
+  </table>
+</div>
