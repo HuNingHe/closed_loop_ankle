@@ -19,7 +19,7 @@
 
 ```bash
 git clone https://github.com/HuNingHe/closed_loop_ankle.git
-cd closed_loop_ankle/controllers/my_controller && mkdir build
+cd closed_loop_ankle/contrers/my_contrer && mkdir build
 cd build && cmake ../
 make -j4
 ```
@@ -35,7 +35,7 @@ ros2 run plotjuggler plotjuggler
 
 ​​&emsp;&emsp;&emsp; If you are not using ros2, you can remove all shared memory related code and recompile, you can run still without data visualization.
 
-​&emsp;&emsp;&emsp; set `test_kinematics` in `my_controller.cpp`(line 352) to false, then you can test torque mapping between motors and ankle joint.
+​&emsp;&emsp;&emsp; set `test_kinematics` in `my_contrer.cpp`(line 352) to false, then you can test torque mapping between motors and ankle joint.
 
 ​&emsp;&emsp;&emsp; **suggest to use plot.xml of ros2_plot in plotjuggler**.
 
@@ -48,7 +48,7 @@ $$
     \theta_{1} \\
     \theta_{2}
 \end{bmatrix}
-=f_1(\theta_{pitch},\theta_{roll}, d, L_1,h_1,h_2)
+=f_1(\theta_{p},\theta_{r}, d, L_1,h_1,h_2)
 $$
 
 ​​​&emsp;&emsp;&emsp; where $f_1$ is `ankle_ik`
@@ -63,12 +63,12 @@ $$
 \end{bmatrix}
 $$
 
-​​​​&emsp;&emsp;&emsp; where $\frac{\delta f_{11}}{\delta \theta_{pitch}}$ is `computeTmLtY`, $\frac{\delta f_{12}}{\delta \theta_{roll}}$ is `computeTmLtX`, $\frac{\delta f_{21}}{\delta \theta_{pitch}}$ is `computeTmRtY`, $\frac{\delta f_{22}}{\delta \theta_{roll}}$ is `computeTmRtX`,or general case $J_2=J_1^{-1}$
+​​​​&emsp;&emsp;&emsp; where $\frac{\delta f_{11}}{\delta \theta_{p}}$ is `computeTmLtY`, $\frac{\delta f_{12}}{\delta \theta_{r}}$ is `computeTmLtX`, $\frac{\delta f_{21}}{\delta \theta_{p}}$ is `computeTmRtY`, $\frac{\delta f_{22}}{\delta \theta_{r}}$ is `computeTmRtX`,or general case $J_2=J_1^{-1}$
 
 $$
 \begin{bmatrix}
-    \theta_{pitch} \\
-    \theta_{roll}
+    \theta_{p} \\
+    \theta_{r}
 \end{bmatrix}
 =\begin{bmatrix}
 0.5(\theta_{1}+\theta_{2}) \\
@@ -80,8 +80,8 @@ $$
 
 $$
 \begin{bmatrix}
-    \dot{\theta}_{pitch} \\
-    \dot{\theta}_{roll}
+    \dot{\theta}_{p} \\
+    \dot{\theta}_{r}
 \end{bmatrix}
 =\begin{bmatrix}
     0.5 & 0.5 \\
@@ -106,15 +106,15 @@ $$
     \tau_2
 \end{bmatrix}=J_1^T
 \begin{bmatrix}
-    \tau_{pitch} \\
-    \tau_{roll}
+    \tau_{p} \\
+    \tau_{r}
 \end{bmatrix}
 $$
 
 $$
 \begin{bmatrix}
-    \tau_{pitch} \\
-    \tau_{roll}
+    \tau_{p} \\
+    \tau_{r}
 \end{bmatrix}=J_2^T\begin{bmatrix}
     \tau_1 \\
     \tau_2
