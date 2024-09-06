@@ -53,13 +53,22 @@ $$
 
 ​​​&emsp;&emsp;&emsp; where $f_1$ is `ankle_ik`
 
+
 $$
 \begin{bmatrix}
-    \dot{\theta}_1 \\
-    \dot{\theta}_2
-\end{bmatrix}=\begin{bmatrix}
-    \dot{\theta}_1 \\
-    \dot{\theta}_2
+    \dot \theta_1 \\
+    \dot \theta_2
+\end{bmatrix}
+=\begin{bmatrix}
+    \frac{\delta f_{11}}{\delta \theta_p} & \frac{\delta f_{12}}{\delta \theta_r} \\
+    \frac{\delta f_{21}}{\delta \theta_p} & \frac{\delta f_{22}}{\delta \theta_r}
+\end{bmatrix}
+\begin{bmatrix}
+    \dot \theta_p \\
+    \dot \theta_r
+\end{bmatrix}=J_2\begin{bmatrix}
+    \dot \theta_p \\
+    \dot \theta_r
 \end{bmatrix}
 $$
 
