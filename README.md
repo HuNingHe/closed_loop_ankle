@@ -60,8 +60,8 @@ $$
     \dot \theta_2
 \end{bmatrix}
 =\begin{bmatrix}
-    \frac{\delta f_{11}}{\delta \theta_p} & \frac{\delta f_{12}}{\delta \theta_r} \\
-    \frac{\delta f_{21}}{\delta \theta_p} & \frac{\delta f_{22}}{\delta \theta_r}
+    \frac{\delta f_{11}}{\delta \theta_p} & \frac{\delta f_{11}}{\delta \theta_r} \\
+    \frac{\delta f_{12}}{\delta \theta_p} & \frac{\delta f_{12}}{\delta \theta_r}
 \end{bmatrix}
 \begin{bmatrix}
     \dot \theta_p \\
@@ -72,7 +72,7 @@ $$
 \end{bmatrix}
 $$
 
-​​​​&emsp;&emsp;&emsp; where $\frac{\delta f_{11}}{\delta \theta_{p}}$ is `computeTmLtY`, $\frac{\delta f_{12}}{\delta \theta_{r}}$ is `computeTmLtX`, $\frac{\delta f_{21}}{\delta \theta_{p}}$ is `computeTmRtY`, $\frac{\delta f_{22}}{\delta \theta_{r}}$ is `computeTmRtX`,or general case $J_2=J_1^{-1}$
+​​​​&emsp;&emsp;&emsp; where $\frac{\delta f_{11}}{\delta \theta_{p}}$ is `computeTmLtY`, $\frac{\delta f_{11}}{\delta \theta_{r}}$ is `computeTmLtX`, $\frac{\delta f_{12}}{\delta \theta_{p}}$ is `computeTmRtY`, $\frac{\delta f_{12}}{\delta \theta_{r}}$ is `computeTmRtX`,or general case $J_2=J_1^{-1}$
 
 $$
 \begin{bmatrix}
