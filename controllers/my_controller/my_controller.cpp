@@ -114,6 +114,16 @@ double calculateTxML(double tML, double tMR, double d, double L1, double h1, dou
 }
 
 double calculateTxMR(double tML, double tMR, double d, double L1, double h1, double h2) {
+    if (std::abs(tML) > 1.52) {
+        tML = (tML / std::abs(tML)) * 1.52;
+    }
+
+    if (std::abs(tMR) > 1.52) {
+        tMR = (tMR / std::abs(tMR)) * 1.52;
+    }
+
+    static double pre_result = 0;
+
     double b_t19_tmp;
     double t12;
     double t14;
@@ -134,9 +144,16 @@ double calculateTxMR(double tML, double tMR, double d, double L1, double h1, dou
     b_t19_tmp = L1 * h2;
     t19 = (b_t19_tmp * std::sin(tMR) - L1 * h1 * std::sin(tML)) + t19_tmp * t14;
     tXtMR_tmp = t5 * t12;
-    return -1.0 / std::sqrt(-(t5 * t5) * (t12 * t12) * t17 * (t19 * t19) + 1.0) *
-           (tXtMR_tmp * (t19_tmp * t15 / 2.0 + b_t19_tmp * std::cos(tMR)) / t15 +
-            tXtMR_tmp * t14 * t17 * t19 / 2.0);
+    
+    double result = -1.0 / std::sqrt(-(t5 * t5) * (t12 * t12) * t17 * (t19 * t19) + 1.0) *
+                    (tXtMR_tmp * (t19_tmp * t15 / 2.0 + b_t19_tmp * std::cos(tMR)) / t15 +
+                    tXtMR_tmp * t14 * t17 * t19 / 2.0);
+    if(std::isnan(result)) {
+        result = pre_result;
+    } else {
+        pre_result = result;
+    }
+    return result;
 }
 
 static double rt_powd_snf(double u0, double u1)
