@@ -58,8 +58,8 @@ double calculateTx(double mL, double mR, double d, double L1, double h1, double 
 
     double denominator = d * (h1 + h2) * cosHalfSum;
 
-    if (denominator == 0) {
-        throw std::runtime_error("Denominator in tx calculation is zero. Check input values.");
+    if (std::abs(denominator) <= 1e-3) {
+        denominator = 1e-3;
     }
 
     // Calculate the arcsine value and return it
