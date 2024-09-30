@@ -111,6 +111,7 @@ double calculateTxML(double tML, double tMR, double d, double L1, double h1, dou
     } else {
         pre_result = result;
     }
+    return result;
 }
 
 double calculateTxMR(double tML, double tMR, double d, double L1, double h1, double h2) {
